@@ -7,62 +7,66 @@
 ---
 
 ## 1. Contexte
-- **Problème / besoin :** <ce qui déclenche la décision>
-- **Contraintes :** <techniques, temps, équipe, outils>
-- **Forces en présence :** <qualité, performance, simplicité, risques>
+- **Problème / besoin :On avait un code un peu désorganisé au début surtout dans les pages ASPX où tout était mélangé
+- **Contraintes :Temps limité Projet en équipe Doit utiliser des design patterns
+- **Forces en présence :simplicité du code flexibilité facilité de maintenance
 
 ---
 
 ## 2. Décision
-> Décrire la décision en 1–3 phrases.
-- Nous choisissons : <solution retenue>
-- Pour : <objectif>
+On a décidé d’utiliser plusieurs design patterns pour améliorer la structure du projet.
+- Nous choisissons d'utiliser Factory, Decorator et Facade
+- Pour :rendre le code plus propre et plus facile à comprendre
 
 ---
 
 ## 3. Alternatives considérées
-### Option A — <nom>
-- **Avantages :** <...>
-- **Inconvénients :** <...>
+### Option A — Sans design patterns
+- **Avantages :**plus rapide à coder
+- **Inconvénients :** code désorganisé
+  difficile à modifier
+  beaucoup de répétition
 
-### Option B — <nom>
-- **Avantages :** <...>
+### Option B — Utiliser des design patterns
+- **Avantages :** code mieux structuré
+  plus facile à comprendre
+  plus flexible
 - **Inconvénients :** <...>
 
 ---
 
 ## 4. Justification (Pourquoi cette décision ?)
-- <raison 1>
-- <raison 2>
-- <raison 3>
+Les design patterns permettent d’avoir une meilleure architecture
+Ça facilite le travail en équipe
+Ça rend le projet plus professionnel
 
 ---
 
 ## 5. Conséquences
 ### Positives
-- <...>
+Code plus propre
+Facile d’ajouter des options (Decorator)
+Création des objets simplifiée (Usine)
+Pages ASPX plus simples (Facade)
 
 ### Négatives / Risques
 - <...>
 
 ### Impact sur l’architecture / le code
-- <modules touchés, patterns concernés, refactoring prévu>
-
----
-
+Ajout de plusieurs classes (Factory, Decorator, Facade)
+Modification des pages ASPX pour utiliser la Facade
+Organisation du code améliorée
 ## 6. Plan d’implémentation (court)
-- [ ] Étape 1 : <...>
-- [ ] Étape 2 : <...>
-- [ ] Étape 3 : <...>
-
----
+ Étape 1 : créer les classes Factory pour les suites
+ Étape 2 : ajouter les Decorators pour les options
+ Étape 3 : créer la Facade pour simplifier l’appel dans ASPX
+ Étape 4 : tester le fonctionnement
 
 ## 7. Validation
-- **Comment vérifier que c’est bon ?**
-  - <tests / métriques / critères d’acceptation>
-
----
-
+Le prix se calcule correctement
+Les options s’ajoutent bien
+Le code ASPX est plus simple
+L’application fonctionne sans erreur
 ## 8. Liens
 - UML : <lien/nom de fichier>
 - Issue/Tâche : <lien>
